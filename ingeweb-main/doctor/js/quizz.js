@@ -23,16 +23,6 @@ jQuery(function() {
       alert("Error occurred");
     },
   });
-
-  function addNewCard(wordpool) {
-    var cardList = $('#card-list');
-
-    cardList.slick('unslick');
-    cardList.html(wordpool); // Use html() instead of append() to replace the entire content
-    cardList.slick(HomeSliderSetting());
-
-    updateCurrentCard(); // Update the current flashcard number
-  }
       
   function addNewCard(wordpool) {
     var cardList = $('#card-list');
