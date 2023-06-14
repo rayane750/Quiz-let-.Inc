@@ -89,7 +89,11 @@ $content .= '
 <div class="col-lg-8">
 <div class="comment-form d-flex align-items-center">
 <div class="flex-shrink-0">
-<div class="avatar avatar-sm rounded-circle">
+<div class="avatar avatar-sm rounded-circle">';
+
+if(ISSET($_SESSION['email'])){
+
+$content .= '
 <img class="avatar-img2test" src="../dist/img/' . $_SESSION['image'] . '" alt="">
 </div>
 </div>
@@ -106,7 +110,7 @@ $content .= '
 </div>
 </div>
 </div>';
-
+}
 // Add JavaScript code to handle the submit button click event
 $content .= '
 <script>
