@@ -39,7 +39,7 @@ if (isset($_GET['idCat'])) {
                       <p class="card__category">Exercice</p>
                       <h3 class="card__heading">' . $exerciseStars . '<img src="../dist/img/category/Star_icon_stylized.svg.png" alt="Star" style="width: 1em; height: 1em;"></h3>
                       <p class="card__desc">' . $exerciseDesc . '</p>
-                      <p class="card__desc"> Duration : ' . $exerciseAuthor . ' min</p>
+                      <p class="card__desc"> Author : ' . $exerciseAuthor . ' </p>
                     </div>
                   </a>';
 
