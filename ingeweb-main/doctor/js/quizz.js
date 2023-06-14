@@ -73,7 +73,7 @@ jQuery(function() {
 
     // Add colored circle to the current flashcard
     currentSlide.addClass('current');
-    percent = (100/maxCard) * currentCard;
+    percent = Math.round((100/maxCard) * currentCard);
     // Update the current flashcard number
     $('#current-card-number').text(percent + '%');
 
