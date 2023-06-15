@@ -1,10 +1,10 @@
 <?php
-class User{
+class Exo{
  
     // database connection and table name
     private $conn;
-    private $table1_name = "users";
-    private $table2
+    private $table_name = "exercices";
+    private $table2;
  
     // object properties
     public $idUser;
@@ -60,14 +60,16 @@ class User{
     // }
 
     // read email
-    function read_email(){
+    function read($name){
         // select all query
+        $this->nameExercice = $name;
         $query = "SELECT
-                    `idUser`, `username`, `email`, `password`, `admin`, `dateRegister`, `image`
-                FROM
-                    " . $this->table_name . " 
-                WHERE
-                    email= '".$this->email."'";
+            `idExercice`, `descTache`, `stars`, `author`, `difficulty`
+        FROM
+            " . $this->table_name . " 
+        WHERE
+            LOWER(descTache) LIKE '%" . strtolower($this->nameExercice) . "%'";
+
 
         // prepare query statement
         $stmt = $this->conn->prepare($query);
@@ -76,7 +78,6 @@ class User{
         $stmt->execute();
         return $stmt;
     }
-
     // create doctor
     // function create(){
     
