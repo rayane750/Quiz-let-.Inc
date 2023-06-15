@@ -10,15 +10,17 @@ session_start();
           <h1 class="text-white mt-4 mb-4">  <div class="text"></div></h1>
           <h1 class="text-white display-1 mb-5">Education Courses</h1>
           <div class="mx-auto mb-5" style="width: 100%; max-width: 600px;">
+          <form action="search.php" method="GET">
               <div class="input-group">
                   <div class="input-group-prepend">
                   </div>
-                  <input type="text" class="form-control border-light" style="padding: 30px 25px;" placeholder="Keyword">
+                  <input type="text" name="keyword" class="form-control border-light" style="padding: 30px 25px;" placeholder="Keyword">
                   <div class="input-group-append">
                       <button class="btn btn-secondary px-4 px-lg-5">Search</button>
                   </div>
               </div>
-          </div>
+          </form>
+              </div>
       </div>
   </div>
   <!-- About Start -->
